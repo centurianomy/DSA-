@@ -3,7 +3,7 @@ public class Largest
 {
 	public static int show(int arr[])
 	{
-		int largest = Integer.MIN_VALUE; //initialise the largest variable with -infinity
+		int largest = Integer.MIN_VALUE; //initialise the largest variable with (-infinity)
 		for(int i=0; i<arr.length; i++)
 		{
 			if(arr[i]>largest)

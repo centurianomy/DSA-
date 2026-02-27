@@ -13,7 +13,9 @@ class Hmap
 		System.out.println("2: "+hm.get("C"));
 		System.out.println("Returns keyset: "+hm.keySet()); //only returns kes.
 		System.out.println("2: "+hm.get("C"));
-			
+
+		System.out.println(hm.containsKey("A")); //returns true if key is present in the map			
+		
 		for(String key: hm.keySet()) 
 		System.out.println(key +"-->"+hm.get(key));
 		
