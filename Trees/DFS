@@ -12,7 +12,7 @@ class TreeNode {
     }
 }
 
-public class Main {
+public class DFS {
 
     public static void dfs(TreeNode root) {
 
