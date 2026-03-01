@@ -1,0 +1,40 @@
+import java.util.*;
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int val) {
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+public class Main {
+
+    public static void dfs(TreeNode root) {
+
+        if (root == null)
+            return;
+
+        System.out.print(root.val + " ");  // visit node
+
+        dfs(root.left);   // go left
+        dfs(root.right);  // go right
+    }
+
+    public static void main(String[] args) {
+
+        // Creating the tree
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+
+        System.out.println("DFS Traversal (Preorder):");
+        dfs(root);
+    }
+}
