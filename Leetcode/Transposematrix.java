@@ -6,7 +6,7 @@ public class Transgposematrix
         int row=matrix.length;
         int col=matrix[0].length; //matrix[0] is used for col because java stores matrx elements as matrix rows only so matrix[0] means number of elements in oth row which is the number of colums.
         
-        int[][] result=new int[row][col]; 
+        int[][] result=new int[col][row]; //we are creating a new matrix with col and row size interchanged because we are going to store the transposed matrix in it. prevents errorwhen the matrix size is not same 
         for(int i=0; i<row; i++){
             for(int j=0; j<col; j++){
                 result[j][i]=matrix[i][j];            
