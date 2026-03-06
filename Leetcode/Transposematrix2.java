@@ -1,4 +1,4 @@
-//Transose matrix using swapping without extra memory 
+//Transose matrix using swapping without extra memory (only works for square matrix ->mxn where m=n)
 public class Transposematrix2
 {
     public static int[][] show(int matrix[][]){
