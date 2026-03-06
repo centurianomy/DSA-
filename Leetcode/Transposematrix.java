@@ -1,5 +1,6 @@
 
-public class Main
+//using extra space
+public class Transgposematrix
 {
     public static int[][] show(int matrix[][]){
         int row=matrix.length;
