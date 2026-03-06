@@ -1,20 +1,21 @@
-
-//using extra space
-public class Transgposematrix
+//Transose matrix using swapping without extra memory 
+public class Transposematrix2
 {
     public static int[][] show(int matrix[][]){
         int row=matrix.length;
-        int col=matrix[0].length; //matrix[0] is used for col because java stores matrx elements as matrix rows only so matrix[0] means number of elements in oth row which is the number of colums.
+        int col=matrix[0].length; //matrix[0] is used for col because java stores matrx elements as matrix rows only so matrix[0] means number of elements in oth row which is the number of colums
         
-        int[][] result=new int[col][row]; //we are creating a new matrix with col and row size interchanged because we are going to store the transposed matrix in it. prevents errorwhen the matrix size is not same 
+        int temp; 
         for(int i=0; i<row; i++){
             for(int j=0; j<col; j++){
-                result[j][i]=matrix[i][j];            
-                //result[i][j]=matrix[j][i]; NOte: this time matrix size is same but it will create problme when the matrix size is (2x3) different. 
+                if(i>j){  //conndition to prevent swapping of elements twice and also to prevent swapping of diagonal elements because they are same in transposed matrix.
+                temp=matrix[i][j]; //swap
+                matrix[i][j]=matrix[j][i];
+                matrix[j][i]=temp;
+                }//result[i][j]=matrix[j][i]; NOte: this time matrix size is same but it will create problme when the matrix size is (2x3) different. 
             }
         }
-        return result;  //remember return gives the address not the value of the matrix because we are returning the reference of the matrix.
-        //L-39: we use s.o.p to print the matrix because we are returning the reference of the matrix and not the value of the matrix.
+        return matrix;
     }
     
     
@@ -36,6 +37,7 @@ public class Transgposematrix
 	    System.out.println("Transpose matrix: ");
 	    for(int i=0; i<matrix.length; i++){
 	        for(int j=0;  j<matrix[0].length; j++){
+	            
 	            System.out.print(transpose[i][j]+" ");        
 	        }
 	        System.out.println();
