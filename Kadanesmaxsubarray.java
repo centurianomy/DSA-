@@ -21,7 +21,7 @@ public class Kadanesmaxsubarray
 		for(int j=i; j<arr.length; j++)
 		{
 			int end=j;
-			currsum = start==0 ? prefix[end] : prefix[start-1];
+			currSum = start==0 ? prefix[end] : prefix[start-1];
 			if(maxSum < currSum)
 			{
 				maxSum=currSum;
@@ -37,9 +37,6 @@ public class Kadanesmaxsubarray
 		int ms= Integer.MIN_VALUE;
 		int cs=0;
 	}*/
-
-
-
 	public static void main(String args[])
 	{
 	int arr[]={-2, -3, 4, -1, -2, 1, 5 -3};
