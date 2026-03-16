@@ -1,5 +1,5 @@
 
-public class Main
+public class substring
 {
     public static void show(int arr[]){
         int n=arr.length;
@@ -9,7 +9,7 @@ public class Main
                 {
                     System.out.println(arr[j]);
                 }
-                 System.out.println();
+                System.out.println();
             }
             //System.out.println();
         }
