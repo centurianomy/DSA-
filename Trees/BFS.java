@@ -1,5 +1,5 @@
 import java.util.*;
-
+// default package is "Trees", we are creating a class named BFS, this class will contain the implementation of breadth first search algorithm for tree traversal
 class TreeNode {
     int val;
     TreeNode left;
@@ -11,8 +11,8 @@ class TreeNode {
         this.right = null;
     }
 }
-
-public class Main {
+// real class for implementation of tree traversal using BFS
+public class BFS {
 
     public static void bfs(TreeNode root) {
 
