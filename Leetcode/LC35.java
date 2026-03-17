@@ -1,4 +1,4 @@
-public class Main
+public class LC35
 {
 	public static void main(String[] args) {
 	    int mid;
