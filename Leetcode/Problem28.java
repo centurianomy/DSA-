@@ -1,21 +1,34 @@
-class Problem28
-{
-    public int strStr(String haystack, String needle) 
-    {
-        for(int i=0 ; i<haystack.length()-needle.length()+1 ; i++)
-        {
-            if(haystack.charAt(i)==needle.charAt(0)) //comparing char of haystack with the first element of the needle string.
-            {
-                if(haystack.substring(i,needle.length()+i).equals(needle))  //comapare the char of haystack with char of needle.(Syntax: s1.substring(i,j))
-                {
+import java.util.*;
+
+class Problem28 {
+    public int strStr(String haystack, String needle) {
+        for (int i = 0; i < haystack.length() - needle.length() + 1; i++) {
+            if (haystack.charAt(i) == needle.charAt(0)) {
+                if (haystack.substring(i, needle.length() + i).equals(needle)) {
                     return i;
-                } 
+                }
             }
         }
-         return -1; 
+        return -1;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter haystack string: ");
+        String haystack = sc.nextLine();
+
+        System.out.print("Enter needle string: ");
+        String needle = sc.nextLine();
+
+        Problem28 obj = new Problem28();
+        int index = obj.strStr(haystack, needle);
+
+        System.out.println("Output index: " + index);
+
+        sc.close();
     }
 }
-
 /*
 	simpler use of substring code:
 
