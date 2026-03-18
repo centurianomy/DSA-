@@ -1,3 +1,4 @@
+import java.util.*;
 class LengthofLastword {
     public int lengthOfLastWord(String s) {
          
@@ -26,4 +27,19 @@ class LengthofLastword {
         System.out.println("\nLength of last word: " + count);
 
          return count;}
+
+    public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter a string: ");
+    String input = sc.nextLine();
+
+    LengthofLastword obj = new LengthofLastword();
+    int result = obj.lengthOfLastWord(input);
+
+    // (Optional) just printing result again
+    System.out.println("Returned Length: " + result);
+
+    sc.close();
+}
 }
